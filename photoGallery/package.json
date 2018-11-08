@@ -9,17 +9,19 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
+    "build": "webpack --mode=production",
     "start": "node server/index.js",
     "db:setup": "node db/seed.js",
-    "test": "jest photogallery/_tests_",
-    "build": "webpack --mode=production"
+    "test": "jest photogallery/_tests_"
   },
   "dependencies": {
+    "@types/cors": "^2.8.4",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "mongoose": "^5.3.6",
+    "normalize-port": "^1.0.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   },

@@ -25,11 +25,11 @@ class Gallery extends React.Component {
   componentDidMount() {
     let propId = Number(window.location.pathname.replace(/\//, ''));
     if (propId > 0 && propId <= 100) {
-      $.get('http://localhost:3003/photos/' + propId, result => {
+      $.get('http://Fec1PhotoGallery.us-east-1.elasticbeanstalk.com/photos/' + propId, result => {
         this.setState({view: 'gallery', currentPropertyId: propId, photos: result, currentPhoto: 0, isExpanded: false});
       })
     } else {
-      $.get('http://localhost:3003/photos', result => {
+      $.get('http://Fec1PhotoGallery.us-east-1.elasticbeanstalk.com/photos', result => {
         this.setState({currentPropertyId: result[0]})
       }, 'json');
     }

@@ -4,9 +4,7 @@ import NavBar from './NavBar.jsx';
 import Headline from './Headline.jsx';
 import Icons from './Icons.jsx';
 import Description from './Description.jsx';
-import normalizePort from 'normalize-port';
 
-const port = normalizePort(process.env.PORT || '8081');
 
 export default class Overview extends React.Component {
   constructor() {
@@ -44,12 +42,14 @@ export default class Overview extends React.Component {
   componentDidMount() {
     let propertyID = Number(window.location.pathname.replace(/\//, ''));
     if (propertyID > 0) {
-      $.get(`http://localhost:${port}/listings/` + propertyID, result => {
+      // $.get(`http://localhost:${port}/listings/` + propertyID, result => {
+      $.get('http://su-casa-overview.us-west-1.elasticbeanstalk.com/listings/' + propertyID, result => {
         console.log(result);
         this.setState({property: result[0], init: true});
       });
     } else {
-      $.get(`http://localhost:${port}/listings`, result => {
+      $.get('http://su-casa-overview.us-west-1.elasticbeanstalk.com/listings', result => {
+      // $.get(`http://localhost:${port}/listings`, result => {
         console.log('success ', result);
         this.setState({property: result[0], init: true});
       }, 'json');
