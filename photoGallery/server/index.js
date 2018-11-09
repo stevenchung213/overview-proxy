@@ -26,6 +26,16 @@ app.get('/photos/:propertyId', function(req, res) {
   });
 });
 
+app.get('/photos', (req, res) => {
+  Photos.find({}, (err, data) => {
+    if (err) {
+      res.send(500, 'Error retrieving photos');
+    } else {
+      res.json(data);
+    }
+  });
+});
+
 var port = 8081;
 
 app.listen(port, function() {
