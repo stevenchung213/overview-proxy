@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "dependencies": {
+    "express": "^4.16.4",
+    "cors": "^2.8.5"
+  },
   "devDependencies": {
     "cors": "^2.8.5",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
