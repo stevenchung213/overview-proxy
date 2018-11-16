@@ -5,3 +5,4 @@ Tech Stack:
   Back End:   Express - Mongo - Mongoose
   Testing:    Jest - Enzyme
   Deployment: AWS EBS - Mongo Atlas
+
