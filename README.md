@@ -1,6 +1,3 @@
 # overview-proxy
 
-  Front End:    React - jQuery - HTML/CSS
-  Back End:     Express - Mongo - Mongoose
-  Testing:      Jest - Enzyme
-  Deployment:   AWS EBS - Mongo Atlas
+TECH STACK:  React - jQuery - HTML/CSS - Express - Mongo - Mongoose - Jest - Enzyme - AWS EBS - Mongo Atlas
