@@ -9,11 +9,13 @@ const Headline = ({property}) => {
           {property.headline}
         </h2>
         <div id='map-pin'>
-          <div id='location'>{property.location}</div>
+          <div id='location'>
+            {property.location}
+          </div>
         </div>
       </div>
     </React.Fragment>
-  )
+  );
 };
 
 export default Headline;

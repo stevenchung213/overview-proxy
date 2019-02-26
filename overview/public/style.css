@@ -1,4 +1,10 @@
-body{
+/*sidebar*/
+
+
+
+/*overview*/
+
+body {
     font-family: 'Lato', sans-serif;
 }
 
@@ -7,7 +13,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
 }
 
 li {
@@ -36,12 +41,14 @@ li a {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 
+
 }
 
 #overview-href {
-    color: #71777c;
+    color: dodgerblue;
     height: 8px;
-    border-bottom: 5px solid royalblue;
+    text-decoration: none !important;
+    /*border-bottom: 5px solid royalblue;*/
 }
 
 .nav-bar-li a:before {
@@ -49,16 +56,20 @@ li a {
     content: '';
     position: absolute;
     width: 100%;
-    height: 5px;
+    /*height: 5px;*/
     bottom: 0;
     left: 0;
     background-color: royalblue;
-    border-bottom: 5px solid royalblue;
+    border-bottom: 20px solid royalblue;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-bar-li a {
+    text-decoration: none !important;
 }
 
 #nav-bar {
@@ -71,6 +82,7 @@ li a {
 
 .nav-bar-list {
     display: inline-block;
+    padding-right: 30px;
     margin-right: auto;
     margin-left: auto;
     max-width: 100%;
@@ -84,12 +96,13 @@ li a {
     line-height: 0;
 }
 
-.nav-bar-list ul {
+.nav-bar-list li {
     display: flex;
+    font-size: 20px;
 }
 
 #main-container {
-    width: 70%;
+    width: 72.5%;
     padding-left: 10%;
     padding-right: 5%;
     border-right: solid 1px;
@@ -111,6 +124,7 @@ li a {
     margin-bottom: -8px;
     font-size: 23px;
     font-weight: bold;
+    padding-left: 100px;
 }
 
 #minimap {
@@ -138,10 +152,9 @@ li a {
     color: #494f54;
 }
 
-/*.icon-bar {*/
-    /*padding: 5px 5px;*/
-    /*margin: 5px 5px;*/
-/*}*/
+.icon-bar {
+    padding-top: 60px;
+}
 
 #icons-container {
     display: inline;
@@ -159,9 +172,9 @@ li a {
     width: auto;
 }
 
-p {
+#description {
     display: block;
-    height: 160px;
+    height: 162px;
     color: #83898e;
     max-width: 100%;
     margin-right: 2em;
@@ -273,7 +286,216 @@ p {
     padding-top: 1em;
 }
 
-#view-more {
-    text-decoration: none;
-    color: dodgerblue;
+.description-box {
+    position: relative;
+    overflow: hidden;
 }
+
+.view-more-less {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+    background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.view-more-expanded {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+}
+
+.view-more {
+    text-decoration: none;
+    /*text-align: center;*/
+    color: dodgerblue;
+    position: relative;
+    cursor: pointer;
+    left: -3em;
+    bottom: -35px;
+}
+
+#amenities {
+    font-size: 23px;
+    color: #40464b;
+    padding-bottom: 20px;
+    border-color: #d0d6db;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+#general, #kitchen, #entertainment {
+    font-size: 18px;
+    color: #40464b;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#amenities-list, #general-list, #kitchen-list, #entertainment-list {
+    column-count: 3;
+    column-width: 50px;
+    column-gap: 32px;
+    padding-bottom: 20px;
+    border-color: #d0d6db;
+    border-bottom-style: solid;
+    border-width: 1px;
+    display: inline-block;
+}
+
+.amenities-listings, .general-listings, .kitchen-listings, .entertainment-listings {
+    font-family: 'Lato', sans-serif;
+    color: #71777c;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+.amenities-singular {
+    display: inline-block;
+}
+
+.owner-details-container {
+    display: inline-block;
+}
+
+#owner-container {
+    position: relative;
+    padding-bottom: 30px;
+    border-color: #d0d6db;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+#owner-info {
+    float: left;
+}
+
+#owner-title {
+    font-size: 23px;
+    color: #40464b;
+    /*padding-top: 20px;*/
+}
+#owner-name {
+    font-family: 'Lato', sans-serif;
+    color: #40464b;
+    text-align: left;
+    padding-left: 40px;
+}
+#owner-since {
+    font-family: 'Lato', sans-serif;
+    color: #71777c;
+    font-size: 13px;
+    text-align: left;
+    margin-top: -15px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+#owner-contact {
+    position: relative;
+    /*margin-left: 75%;*/
+    padding-top: 14px;
+    padding-left: 30em;
+    text-align: center;
+    float: right;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    background-color: white;
+    color: royalblue;
+    border-color: #d0d6db;
+    /*padding: 14px 36px;*/
+    border-radius: 100px;
+    transition: all .25s ease-in-out;
+}
+#owner-contact:hover {
+    border-color: royalblue;
+}
+
+
+/*reviews*/
+/*.smaller-font {*/
+    /*font-size: 14px;*/
+    /*padding-top: 30px;*/
+/*}*/
+
+/*.bold-me {*/
+    /*padding-top: 10px;*/
+    /*font-size: 17px;*/
+    /*color: #70767b;*/
+/*}*/
+
+/*.description-container {*/
+    /*padding-top: 1em;*/
+/*}*/
+
+/*#view-more {*/
+    /*text-decoration: none;*/
+    /*color: dodgerblue;*/
+    /*padding-bottom: 3em;*/
+/*}*/
+
+/*#review-container {*/
+    /*box-sizing: border-box;*/
+    /*color: rgb(94, 109, 119);*/
+    /*height: auto;*/
+    /*overflow-wrap: break-word;*/
+    /*text-size-adjust: 100%;*/
+    /*white-space: pre-line;*/
+    /*width: 840px;*/
+    /*word-break: break-word;*/
+    /*column-rule-color: rgb(94, 109, 119);*/
+    /*perspective-origin: 420px 194px;*/
+    /*transform-origin: 420px 194px;*/
+    /*caret-color: rgb(94, 109, 119);*/
+    /*border-top: 1px solid rgb(211, 216, 222);*/
+    /*border-bottom: 1px solid rgb(211, 216, 222);*/
+    /*font: normal normal 400 normal 16px / 24px Lato, Arial, "Helvetica Neue", sans-serif;*/
+    /*padding-bottom: 20px;*/
+/*}*/
+
+/*#rating-stayed-container {*/
+    /*display: flex;*/
+/*}*/
+
+/*#stayed {*/
+    /*margin-left: 5px;*/
+/*}*/
+
+/*#reviewer-name {*/
+    /*font-weight: 700;*/
+/*}*/
+
+/*#reviewer-location {*/
+    /*margin-left: 5px;*/
+/*}*/
+
+/*#customer-review-container {*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+/*}*/
+
+/*#sixty-reviews-title {*/
+    /*font-size: 22px;*/
+    /*font-weight: 700;*/
+/*}*/
+
+/*#stars-average-container {*/
+    /*display: flex;*/
+/*}*/
+
+/*#average-description {*/
+    /*margin-left: 10px;*/
+/*}*/
+
+/*.review-status-container {*/
+    /*display: flex;*/
+    /*margin: 35px 0 35px 0;*/
+    /*justify-content: space-between;*/
+/*}*/

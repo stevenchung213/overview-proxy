@@ -21,18 +21,16 @@ class Gallery extends React.Component {
     this.expandPhoto = this.expandPhoto.bind(this);
     this.resetPhoto = this.resetPhoto.bind(this);
   }
-  
+
   componentDidMount() {
     let propId = Number(window.location.pathname.replace(/\//, ''));
-    if (propId > 0 && propId <= 100) {
-      $.get('http://Fec1PhotoGallery.us-east-1.elasticbeanstalk.com/photos/' + propId, result => {
-        this.setState({view: 'gallery', currentPropertyId: propId, photos: result, currentPhoto: 0, isExpanded: false});
-      })
-    } else {
-      $.get('http://Fec1PhotoGallery.us-east-1.elasticbeanstalk.com/photos', result => {
-        this.setState({currentPropertyId: result[0]})
-      }, 'json');
+    if (!(propId > 0 && propId <= 100)) {
+      propId = Math.floor(Math.random() * 100) + 1;
     }
+    // $.get('http://Fec1PhotoGallery.us-east-1.elasticbeanstalk.com/photos/' + propId, result => {
+    $.get(`http://localhost:4000/photos/` + propId, result => {
+      this.setState({view: 'gallery', currentPropertyId: propId, photos: result, currentPhoto: 0, isExpanded: false});
+    })
   }
 
   goToNextPhoto() {
@@ -61,21 +59,25 @@ class Gallery extends React.Component {
 
   render() {
     if (this.state.photos.length) {
-      
-      if (this.state.view === 'gallery') { 
+
+      if (this.state.view === 'gallery') {
         return (
-          <div className="gallery">
-            <div className="button-group">
-             <LeftArrow handleClick={this.goToPrevPhoto} photos={this.state.photos} currentPhoto={this.state.currentPhoto}/>
-             <ExpandButton handleClick={this.expandPhoto} photos={this.state.photos} photo={this.state.currentPhoto}/>
+          <React.Fragment>
+            {/*<Reservation/>*/}
+            <div className="gallery">
+              <div className="button-group">
+                <LeftArrow handleClick={this.goToPrevPhoto} photos={this.state.photos} currentPhoto={this.state.currentPhoto}/>
+                {/*<ExpandButton handleClick={this.expandPhoto} photos={this.state.photos} photo={this.state.currentPhoto}/>*/}
+              </div>
+
+              <div className="gallery-slideshow">
+                <Photo handleClick={this.expandPhoto} photos={this.state.photos} photo={this.state.currentPhoto}/>
+                {/*<Photo photos={this.state.photos} photo={this.state.currentPhoto}/>*/}
+              </div>
+
+              <RightArrow handleClick={this.goToNextPhoto} photos={this.state.photos} photo={this.state.currentPhoto}/>
             </div>
-
-            <div className="gallery-slideshow">
-              <Photo photos={this.state.photos} photo={this.state.currentPhoto}/>
-            </div>    
-
-            <RightArrow handleClick={this.goToNextPhoto} photos={this.state.photos} photo={this.state.currentPhoto}/>
-          </div>
+          </React.Fragment>
         );
 
       } else if (this.state.view === 'expand') {
@@ -88,7 +90,7 @@ class Gallery extends React.Component {
 
             <div className="expanded-slideshow">
               <Photo photos={this.state.photos} photo={this.state.currentPhoto}/>
-            </div>    
+            </div>
 
             <RightArrow handleClick={this.goToNextPhoto} photos={this.state.photos} photo={this.state.currentPhoto}/>
           </div>

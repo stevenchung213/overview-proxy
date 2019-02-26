@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Photo = ({ photos, photo }) => {
+const Photo = ({ photos, photo, handleClick }) => {
   if (photos.length && photo >= 0) {
     if (photo === photos.length - 1) {
       return (
         <div>
           {/* <img className="prev-photo" src={photos[photo - 1].photoURL}/> */}
-          <img className="main-photo" src={photos[photo].photoURL}/>
+          <img className="main-photo" src={photos[photo].photoURL} onClick={() => handleClick()} />
+          {/*<img className="main-photo" src={photos[photo].photoURL} />*/}
           {/* <img className="next-photo" src={photos[0].photoURL}></img> */}
         </div>
       );
@@ -14,7 +15,8 @@ const Photo = ({ photos, photo }) => {
       return (
         <div>
           {/* <img className="prev-photo" src={photos[photos.length - 1].photoURL}/> */}
-          <img className="main-photo" src={photos[photo].photoURL}/>
+          <img className="main-photo" src={photos[photo].photoURL} onClick={() => handleClick()} />
+          {/*<img className="main-photo" src={photos[photo].photoURL} />*/}
           {/* <img className="next-photo" src={photos[photo + 1].photoURL}></img> */}
         </div>
       );
@@ -22,7 +24,8 @@ const Photo = ({ photos, photo }) => {
       return (
         <div>
           {/* <img className="prev-photo" src={photos[photo - 1].photoURL}/> */}
-          <img className="main-photo" src={photos[photo].photoURL}/>
+          <img className="main-photo" src={photos[photo].photoURL} onClick={() => handleClick()} />
+          {/*<img className="main-photo" src={photos[photo].photoURL} />*/}
           {/* <img className="next-photo" src={photos[photo + 1].photoURL}></img> */}
         </div>
       );

@@ -1,0 +1,141 @@
+.navbar-default {
+    background-color: white;
+}
+.navbar > div {
+    float: left;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #0067db;
+}
+
+
+.btn-group-lg>.btn, .btn-lg {
+    border-radius: 40px;
+    font-size:14px;
+}
+
+.btn-default {
+    background-color: white;
+    color: #0067db;
+    text-shadow: none;
+    transition: all .25s ease-in-out;
+}
+
+#list-your-prop-button {
+    margin-top: 5px;
+    padding: 13px 16px;
+}
+
+#list-your-prop-button:hover {
+    margin-top: 5px;
+    padding: 13px 16px;
+    border-color: #0067db;
+    background-color:white;
+    transition: all .25s ease-in-out;
+}
+
+#birdhouse-logo {
+    display: inline-block;
+    padding-left:2em;
+}
+
+#top-right-header {
+    float: right;
+    margin-top: 5px;
+}
+
+#main-navbar {
+    border-color: transparent;
+    display: flex;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    height: 156px;
+}
+
+.container {
+    width: 100% !important;
+    height: 160px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#main-logo-container {
+    display: inline-block;
+    font-family: Lato, serif;
+    /*position: absolute;*/
+    /*left: -90px;*/
+}
+
+#top-header-logo-img {
+    height: 100px;
+}
+
+#input-forms {
+    display:flex;
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+    /*width: 72.5%;*/
+    /*padding-left: 40px;*/
+    /*justify-content: center;*/
+}
+
+#input-forms input {
+    height: 50px;
+}
+
+form {
+    padding-right: 0.5em;
+}
+
+.form-control {
+    height: 5em;
+}
+#search-button {
+    padding: 10px 24px;
+    background-color:white;
+    font-size:1.8rem;
+    color: #0067db;
+    border-radius:100px;
+    font-weight:400;
+    margin-left: 15px
+}
+
+#destination-search-input {
+    padding-right: 1.5em;
+
+}
+
+.form-details {
+    height: 55px;
+    width: 170px;
+}
+
+.dropdown {
+    padding: 0 0;
+}
+
+#destination-form {
+    width: 450px;
+}
+
+#flag-icons-container {
+    display: inline-flex;
+    list-style: none;
+    margin: 15px;
+    height: 20px;
+}
+
+#current-lang {
+    padding-top: 20px;
+}
+
+.nav.navbar-nav {
+    display: inline-flex;
+}
+
+.nav.navbar-nav li {
+    padding: 16px;
+}
+

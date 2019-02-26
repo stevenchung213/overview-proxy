@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="http://su-casa-overview.us-west-1.elasticbeanstalk.com/style.css">
-		<link rel="stylesheet" type="text/css" href="http://fec1photogallery.us-east-1.elasticbeanstalk.com/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-		<title>Su Casa</title>
-	</head>
-	<body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<!--<link rel="stylesheet" type="text/css" href="../overview/public/style.css">-->
+	<!--<link rel="stylesheet" type="text/css" href="../photoGallery/client/dist/styles.css">-->
+	<!--<link rel="stylesheet" type="text/css" href="../TopBar/dist/style.css">-->
+	<link rel="stylesheet" type="text/css" href="overview.css">
+	<link rel="stylesheet" type="text/css" href="photogallery.css">
+	<link rel="stylesheet" type="text/css" href="topbar.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	      crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css">
+	
+	<!--<link rel="stylesheet" type="text/css" href="http://su-casa-overview.us-west-1.elasticbeanstalk.com/style.css">-->
+	<!--<link rel="stylesheet" type="text/css" href="http://fec1photogallery.us-east-1.elasticbeanstalk.com/styles.css">-->
+	<title>Su Casa</title>
+</head>
+<body>
+	<div id="home">
+		<div id="top-navbar"></div>
 		<div id="app"></div>
+		<div id="reservation"></div>
 		<div id="overview"></div>
-		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-		<script src="http://su-casa-overview.us-west-1.elasticbeanstalk.com/overview.js"></script>
-		<script src="http://fec1photogallery.us-east-1.elasticbeanstalk.com/bundle.js"></script>
-	</body>
+	</div>
+	<script src="http://localhost:3000/overview.js"></script>
+	<script src="http://localhost:4000/bundle.js"></script>
+	<script src="http://localhost:5000/bundle.js"></script>
+	<script src="http://localhost:5001/bundle.js"></script>
+<!--<script src="../overview/public/overview.js"></script>-->
+<!--<script src="../photoGallery/client/dist/bundle.js"></script>-->
+<!--<script src="http://su-casa-overview.us-west-1.elasticbeanstalk.com/overview.js"></script>-->
+<!--<script src="http://fec1photogallery.us-east-1.elasticbeanstalk.com/bundle.js"></script>-->
+</body>
 </html>
+

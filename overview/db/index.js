@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
+
 // mongoose.connect('mongodb://localhost/fec', { useNewUrlParser: true }).then(console.log('mongoose connected!'));
-const mongoURI = 'mongodb+srv://steve:102884@su-casa-t1n9r.mongodb.net/fec';
-mongoose.connect(mongoURI, { useNewUrlParser: true }).then(console.log('mongoose' +
+const mongoURI = 'mongodb://localhost/fec';
+// const mongoURI = 'mongodb+srv://steve:102884@su-casa-t1n9r.mongodb.net/fec';
+mongoose.connect(mongoURI, { useNewUrlParser: true }).then(()=> console.log('mongoose' +
   ' connected!'));
 let db = mongoose.connection;
 
@@ -25,7 +27,12 @@ let overviewSchema = mongoose.Schema({
   brief: String,
   description: String,
   owner: String,
-  phone: String
+  phone: String,
+  amenities: Array,
+  general: Array,
+  kitchen: Array,
+  entertainment: Array,
+  notes: Array
 });
 
 const overview = mongoose.model('overview', overviewSchema);

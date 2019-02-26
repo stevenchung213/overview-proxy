@@ -22,6 +22,6 @@ const getPhotoData = function(num) {
   return data;
 }
 
-const photoData = getPhotoData(1045);
+const photoData = getPhotoData(1046);
 
 Photo.create(photoData);

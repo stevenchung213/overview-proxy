@@ -9,7 +9,7 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "build": "webpack --mode=production",
+    "build": "webpack --mode=production --watch",
     "start": "node server/index.js",
     "db:setup": "node db/seed.js",
     "test": "jest photogallery/_tests_"

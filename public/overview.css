@@ -1,0 +1,546 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    position: relative;
+    float: left;
+    display: block;
+    color: dodgerblue;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a {
+    position: relative;
+    display: block;
+    color: dodgerblue;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    white-space: nowrap;
+}
+
+.nav-bar-li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#overview {
+    border-top: 1px solid #d3d8de;
+    /*padding-top: 1px;*/
+    width: 72.5%;
+    float: left;
+}
+
+#reservation {
+    border-top: 1px solid #d3d8de;
+    position: -webkit-sticky;
+    position: relative;
+    top: 0;
+    width: 27.5%;
+    float: right;
+}
+
+.stuck {
+    position: fixed !important;
+    right: 0;
+}
+
+#overview-href {
+    color: dodgerblue;
+    height: 8px;
+    text-decoration: none !important;
+    /*border-bottom: 5px solid royalblue;*/
+}
+
+.nav-bar-li a:before {
+    top: 40px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    /*height: 5px;*/
+    bottom: 0;
+    left: 0;
+    background-color: royalblue;
+    border-bottom: 20px solid royalblue;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-bar-li a {
+    text-decoration: none !important;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    border-bottom: 2px;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-bar-list {
+    padding-top: 1px;
+    display: inline-flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 95%;
+    max-width: 100%;
+    border-color: #d0d6db;
+    border-bottom-style: solid;
+    border-width: 1px;
+    height: 60px;
+    background-color: white;
+    z-index: 1000;
+    vertical-align: center;
+    line-height: 0;
+    justify-content: center;
+}
+
+.nav-bar-list li {
+    display: flex;
+    font-size: 20px;
+}
+
+#main-container {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 5%;
+    border-right: solid 1px;
+    border-color: #d0d6db;
+}
+
+#minimap-container {
+    display: block;
+    padding-top: 37px;
+    height: 110px;
+    flex-flow: row;
+}
+
+#headline {
+    position: relative;
+    top: -19px;
+    vertical-align: top;
+    color: #40464b;
+    margin-bottom: -8px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 100px;
+}
+
+#minimap {
+    float: left;
+    padding-right: 1em;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/minimap.png') no-repeat;
+    height: 79px;
+    width: 79px;
+}
+
+#map-pin {
+    margin-left: 95px;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/mappin.PNG') no-repeat;
+}
+
+#location {
+    display: inline;
+    width: 150px;
+    padding-left: 20px;
+    color: #858b90;
+    font-size: 14px;
+}
+
+#brief {
+    color: #494f54;
+}
+
+.icon-bar {
+    padding-top: 45px;
+}
+
+#icons-container {
+    height: 120px;
+    width: 95%;
+}
+
+#icons-container ul {
+    height: auto;
+    width: 95%;
+    justify-content: center;
+    display: inline-flex;
+
+}
+
+#icons-container ul li{
+    height: 110px;
+    padding: 0 3%;
+}
+
+.icons {
+    color: #83898e;
+    width: auto;
+}
+
+#description {
+    display: block;
+    height: 162px;
+    color: #83898e;
+    max-width: 100%;
+    margin-right: 2em;
+    overflow: hidden;
+}
+
+#type {
+    background-size: 50%;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/type.png') no-repeat top center;
+    justify-content: center;
+    height: 5em;
+}
+
+#type span {
+    display: block;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    bottom: -20px;
+}
+
+#bedrooms {
+    background-size: 35%;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/bedrooms.png') no-repeat top center;
+    justify-content: center;
+    height: 5em;
+}
+
+#bedrooms span {
+    display: block;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    bottom: -20px;
+}
+
+#sleeps {
+    background-size: 35%;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/sleeps.png') no-repeat top center;
+    justify-content: center;
+    height: 5em;
+}
+
+#sleeps span {
+    display: block;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    bottom: -20px;
+}
+
+#bathrooms {
+    background-size: 35%;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/bathrooms.png') no-repeat top center;
+    justify-content: center;
+    height: 5em;
+}
+
+#bathrooms span {
+    display: block;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    bottom: -20px;
+}
+
+#halfbaths {
+    background-size: 35%;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/halfbaths.png') no-repeat top center;
+    justify-content: center;
+    height: 5em;
+}
+
+#halfbaths span {
+    display: block;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    bottom: -20px;
+}
+
+#minstay {
+    background-size: 35%;
+    background: url('https://s3-us-west-1.amazonaws.com/fec-su-casa/minstay.png') no-repeat top center;
+    justify-content: center;
+    height: 5em;
+}
+
+#minstay span {
+    display: block;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    bottom: -20px;
+}
+
+.smaller-font {
+    font-size: 14px;
+    padding-top: 30px;
+}
+
+.bold-me {
+    padding-top: 10px;
+    font-size: 17px;
+    color: #70767b;
+}
+
+.description-container {
+    padding-top: 1em;
+    width: 95%;
+}
+
+.description-box {
+    padding-left: 10px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.view-more-less {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 45px 0;
+    background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.view-more-expanded {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.view-more {
+    font-size: 16px;
+    text-decoration: none;
+    color: dodgerblue;
+    position: relative;
+    cursor: pointer;
+    left: -3em;
+    bottom: -50px;
+    z-index: 1000;
+}
+
+.view-less {
+    font-size: 16px;
+    text-decoration: none;
+    color: dodgerblue;
+    position: relative;
+    cursor: pointer;
+    left: -3em;
+    z-index: 1000;
+    bottom: -13px !important;
+}
+
+#amenities {
+    font-size: 23px;
+    color: #40464b;
+    padding-bottom: 20px;
+
+}
+
+#general, #kitchen, #entertainment {
+    font-size: 18px;
+    color: #40464b;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#amenities-list, #general-list, #kitchen-list, #entertainment-list {
+    column-count: 3;
+    column-width: 50px;
+    column-gap: 32px;
+    padding-bottom: 20px;
+    border-color: #d0d6db;
+    border-bottom-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.amenities-listings, .general-listings, .kitchen-listings, .entertainment-listings {
+    font-family: 'Lato', sans-serif;
+    color: #71777c;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+.amenities-container h2, .general-container h2, .kitchen-container h2, .entertainment-container h2, #owner-container h3 {
+    font-weight: bolder;
+}
+
+.amenities-singular {
+    display: inline-block;
+}
+
+.owner-details-container {
+    display: inline-block;
+}
+
+#owner-container {
+    position: relative;
+    padding-bottom: 30px;
+    border-color: #d0d6db;
+    border-bottom-style: solid;
+    border-width: 1px;
+    width: 95%
+}
+
+#owner-info {
+    float: left;
+}
+
+#owner-title {
+    font-size: 23px;
+    color: #40464b;
+    /*padding-top: 20px;*/
+}
+#owner-name {
+    font-family: 'Lato', sans-serif;
+    color: #40464b;
+    text-align: left;
+    padding-left: 40px;
+}
+#owner-since {
+    font-family: 'Lato', sans-serif;
+    color: #71777c;
+    font-size: 13px;
+    text-align: left;
+    margin-top: -15px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+#owner-contact {
+    position: relative;
+    /*margin-left: 75%;*/
+    padding-top: 14px;
+    padding-left: 30em;
+    text-align: center;
+    float: right;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    background-color: white;
+    color: royalblue;
+    border-color: #d0d6db;
+    /*padding: 14px 36px;*/
+    border-radius: 100px;
+    transition: all .25s ease-in-out;
+}
+#owner-contact:hover {
+    border-color: royalblue;
+}
+
+.amenities-container, .general-container, .kitchen-container, .entertainment-container {
+    width: 95%;
+}
+
+
+/*reviews*/
+/*.smaller-font {*/
+/*font-size: 14px;*/
+/*padding-top: 30px;*/
+/*}*/
+
+/*.bold-me {*/
+/*padding-top: 10px;*/
+/*font-size: 17px;*/
+/*color: #70767b;*/
+/*}*/
+
+/*.description-container {*/
+/*padding-top: 1em;*/
+/*}*/
+
+/*#view-more {*/
+/*text-decoration: none;*/
+/*color: dodgerblue;*/
+/*padding-bottom: 3em;*/
+/*}*/
+
+/*#review-container {*/
+/*box-sizing: border-box;*/
+/*color: rgb(94, 109, 119);*/
+/*height: auto;*/
+/*overflow-wrap: break-word;*/
+/*text-size-adjust: 100%;*/
+/*white-space: pre-line;*/
+/*width: 840px;*/
+/*word-break: break-word;*/
+/*column-rule-color: rgb(94, 109, 119);*/
+/*perspective-origin: 420px 194px;*/
+/*transform-origin: 420px 194px;*/
+/*caret-color: rgb(94, 109, 119);*/
+/*border-top: 1px solid rgb(211, 216, 222);*/
+/*border-bottom: 1px solid rgb(211, 216, 222);*/
+/*font: normal normal 400 normal 16px / 24px Lato, Arial, "Helvetica Neue", sans-serif;*/
+/*padding-bottom: 20px;*/
+/*}*/
+
+/*#rating-stayed-container {*/
+/*display: flex;*/
+/*}*/
+
+/*#stayed {*/
+/*margin-left: 5px;*/
+/*}*/
+
+/*#reviewer-name {*/
+/*font-weight: 700;*/
+/*}*/
+
+/*#reviewer-location {*/
+/*margin-left: 5px;*/
+/*}*/
+
+/*#customer-review-container {*/
+/*display: flex;*/
+/*flex-direction: column;*/
+/*}*/
+
+/*#sixty-reviews-title {*/
+/*font-size: 22px;*/
+/*font-weight: 700;*/
+/*}*/
+
+/*#stars-average-container {*/
+/*display: flex;*/
+/*}*/
+
+/*#average-description {*/
+/*margin-left: 10px;*/
+/*}*/
+
+/*.review-status-container {*/
+/*display: flex;*/
+/*margin: 35px 0 35px 0;*/
+/*justify-content: space-between;*/
+/*}*/
